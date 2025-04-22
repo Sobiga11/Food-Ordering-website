@@ -1,0 +1,95 @@
+/* Container for the signup form */
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background: linear-gradient(135deg, #f4f4f4, #e0e0e0); /* Gradient background */
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Styling for the form header */
+.register-container h2 {
+  color: #333;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-out;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Text shadow for a subtle depth effect */
+}
+
+/* Form styling */
+form {
+  background: #fff;
+  border-radius: 15px; /* Slightly more rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow for more contrast */
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  animation: scaleUp 0.5s ease-out;
+  border: 1px solid #ddd; /* Border for subtle definition */
+}
+
+/* Input field styling */
+form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* More rounded corners */
+  font-size: 16px;
+  margin-bottom: 20px; /* Increased spacing between input fields */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: #fafafa; /* Subtle background color for inputs */
+}
+
+/* Focus state for input fields */
+form input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+  outline: none;
+  background: #fff; /* Highlight background on focus */
+}
+
+/* Button styling */
+button {
+  background: #ff5722; /* Orange background */
+  border: none;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: bold; /* Bolder text for emphasis */
+}
+
+/* Hover and focus state for button */
+button:hover,
+button:focus {
+  background: #e64a19; /* Darker orange on hover */
+  transform: scale(1.05);
+}
+
+/* Animation for form */
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animation for heading */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,261 @@
+/* .cart-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.cart-items {
+    width: 70%;
+}
+
+.cart-item-card {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.food-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quantity-count {
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.item-price {
+    font-size: 14px;
+    color: #ff6347;
+}
+
+.remove-btn {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.right-container {
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sub-total, .items-count, .delivery-fees, .total {
+    margin-bottom: 10px;
+}
+
+.checkout-btn {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+} */
+
+/* General Cart Container */
+.cart-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    background-color: #f4f4f9; /* Light background for the whole container */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin: 20px;
+}
+
+/* Cart Items Section */
+.cart-items {
+    width: 75%;
+    overflow-y: auto; /* Scroll if items exceed container height */
+    max-height: 600px; /* Limit the height */
+}
+
+/* Individual Cart Item */
+.cart-item-card {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    transition: box-shadow 0.3s, transform 0.3s; /* Smooth hover effect */
+}
+
+.cart-item-card:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+/* Food Image */
+.food-image {
+    width: 100px; /* Increased size */
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 8px;
+    border: 2px solid #f0f0f0; /* Light border */
+}
+
+/* Item Details Section */
+.item-details {
+    flex: 1;
+}
+
+/* Item Title */
+.item-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+/* Quantity Container */
+.quantity-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Quantity Buttons */
+.quantity-btn {
+    background-color: #ff6347;
+    color: #ffffff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.quantity-btn:hover {
+    background-color: #e5534d; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Quantity Count */
+.quantity-count {
+    margin: 0 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Item Price */
+.item-price {
+    font-size: 16px;
+    color: #ff6347;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* Remove Button */
+.remove-btn {
+    background-color: #ff6347;
+    color: #ffffff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    margin-top: 10px;
+}
+
+.remove-btn:hover {
+    background-color: #e5534d; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Right Container (Price Details) */
+.right-container {
+    width: 25%;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Soft shadow */
+}
+
+/* Header */
+.header {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Price Details Sections */
+.sub-total, .items-count, .delivery-fees, .total {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Checkout Button */
+.checkout-btn {
+    background-color: #ff6347;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.checkout-btn:hover {
+    background-color: #e5534d; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}

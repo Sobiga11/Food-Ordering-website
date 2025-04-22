@@ -1,0 +1,464 @@
+/* Your Existing Styles */
+/* General Page Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page Title Styling */
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ff6347;
+    margin-top: 20px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+/* Products Container Styling */
+.products-container {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Product Card Styling */
+.product-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    animation: bounceIn 1s ease-in-out;
+    flex: 1 1 calc(33.333% - 20px); 
+    box-sizing: border-box;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Image Styling */
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Product Title Styling */
+.product-card .product-title {
+    font-size: 1.25rem;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Price Styling */
+.product-card .product-price {
+    font-size: 1.5rem;
+    color: #ff6347;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Add to Cart Button Styling */
+.product-card button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #e5533d;
+    transform: scale(1.05);
+}
+
+/* No Items Found Message Styling */
+h2 center {
+    font-size: 2rem;
+    color: #999;
+    margin-top: 50px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Adding a Global Transition Effect */
+* {
+    transition: all 0.3s ease;
+}
+
+
+/* Additional Styling for the New Sections */
+
+/* Food Styles Section */
+.food-styles-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 60px;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #e77f6b transparent; /* For Firefox */
+}
+
+/* Custom Scrollbar Styles for Webkit Browsers (Chrome, Safari) */
+.food-styles-container::-webkit-scrollbar {
+    height: 8px; /* Height for horizontal scrollbar */
+}
+
+.food-styles-container::-webkit-scrollbar-thumb {
+    background-color: #e77f6b; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners */
+    transition: background-color 0.3s ease;
+}
+
+.food-styles-container::-webkit-scrollbar-thumb:hover {
+    background-color: #d65a4f; /* Darker shade on hover */
+}
+
+.food-styles-container::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light background for the track */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.food-style {
+    min-width: 200px;
+    flex: 0 0 auto;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    scroll-snap-align: center;
+    border: 2px solid transparent;
+}
+
+.food-style:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-color: #e77f6b;
+}
+
+.food-style img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.food-style img:hover {
+    transform: scale(1.1);
+    filter: brightness(80%);
+}
+
+.food-style p {
+    margin: 20px 1;
+    font-size: 18px;
+    color: #555;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.food-style p:hover {
+    color: #e77f6b;
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .food-styles-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .food-style {
+        min-width: 250px;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* 2D Slider Section for International Cuisines */
+.cuisine-slider-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 60px;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #e77f6b transparent; /* For Firefox */
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+/* Custom Scrollbar Styles for Webkit Browsers (Chrome, Safari) */
+.cuisine-slider-container::-webkit-scrollbar {
+    height: 8px; /* Height for horizontal scrollbar */
+}
+
+.cuisine-slider-container::-webkit-scrollbar-thumb {
+    background-color: #e77f6b; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners */
+    transition: background-color 0.3s ease;
+}
+
+.cuisine-slider-container::-webkit-scrollbar-thumb:hover {
+    background-color: #d65a4f; /* Darker shade on hover */
+}
+
+.cuisine-slider-container::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light background for the track */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.cuisine-item {
+    min-width: 200px;
+    flex: 0 0 auto;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    scroll-snap-align: center;
+    border: 2px solid transparent;
+}
+
+.cuisine-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-color: #e77f6b;
+}
+
+.cuisine-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.cuisine-item img:hover {
+    transform: scale(1.1);
+    filter: brightness(80%);
+}
+
+.cuisine-item p {
+    margin: 20px 1;
+    font-size: 18px;
+    color: #555;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.cuisine-item p:hover {
+    color: #e77f6b;
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .cuisine-slider-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cuisine-item {
+        min-width: 250px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Smooth Scrolling for Cuisine Section */
+.cuisine-slider-container {
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    display: flex;
+    gap: 60px;
+    padding: 10px 0;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #e77f6b transparent; /* For Firefox */
+    scroll-behavior: smooth;
+}
+
+/* Styling for the Section Heading */
+.cuisine-slider h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+    font-size: 26px;
+    position: relative;
+}
+
+.cuisine-slider h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #e77f6b;
+    border-radius: 2px;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+}
+
+/* Add some spacing for the text below the cuisine slider */
+.cuisine-description {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Hide scrollbar for WebKit browsers */
+.slide-bar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+
+/* Hide scrollbar for Internet Explorer, Edge, and Firefox */
+.slide-bar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    overflow-x: auto; /* Allow horizontal scrolling */
+}
+
+/* Ensure a clean look for the scrollbar area */
+.slide-bar {
+    margin-top: 40px;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 30px;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+}
+
+/* Individual slider item styles */
+.slide-bar-item {
+    flex: 0 0 auto;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    scroll-snap-align: center;
+    border: 2px solid transparent;
+}
+
+.slide-bar-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-color: #e77f6b;
+}
+
+.slide-bar-item img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.slide-bar-item img:hover {
+    transform: scale(1.1);
+    filter: brightness(80%);
+}
+
+.slide-bar-item p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.slide-bar-item p:hover {
+    color: #e77f6b;
+    transform: translateY(-5px);
+}
+
+/* Additional slider section styles */
+.food-styles, .cuisine-slider {
+    margin: 20px;
+}
+
+.slider-slide-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.slider-slide-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.slider-slide-content p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}
+

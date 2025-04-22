@@ -1,0 +1,29 @@
+/* ProductDetails.css */
+.product-details {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-image {
+    width: 300px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.product-description {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.related-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.related-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}

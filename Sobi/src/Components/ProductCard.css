@@ -1,0 +1,169 @@
+/* Product Card Container */
+.product-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    padding: 20px;
+    margin: 10px;
+    animation: bounceIn 1s ease-in-out;
+}
+
+/* Hover Effects for Product Card */
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Image Styling */
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.1);
+    filter: brightness(90%);
+}
+
+/* Product Content Styling */
+.content {
+    padding: 15px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    position: relative;
+    top: -20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+.product-card:hover .content {
+    background-color: #ffefeb;
+}
+
+/* Product Title Styling */
+.product-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.product-card:hover .product-title {
+    color: #ff6347;
+}
+
+/* Product Description Styling */
+.product-description {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+/* Product Price Styling */
+.product-price {
+    font-size: 1.25rem;
+    color: #ff6347;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+.primary-btn {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.primary-btn:hover {
+    background-color: #e5533d;
+    transform: scale(1.05);
+}
+
+/* Keyframe Animations */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Global Transition for Smooth Effects */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Additional Decorative Styling */
+.product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #ff6347, #ff914d);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.product-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 60%;
+    height: 5px;
+    background: linear-gradient(90deg, #ff914d, #ff6347);
+    transform: translateX(-50%);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Product.css */
+
+.food-styles {
+    padding: 20px;
+}
+
+.swiper-slide-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.swiper-slide-content img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.swiper-slide-content p {
+    margin-top: 10px;
+    font-size: 16px;
+}

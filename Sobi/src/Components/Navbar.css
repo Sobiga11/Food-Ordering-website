@@ -1,0 +1,187 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgb(255, 98, 0);
+}
+
+.navbar-logo img {
+  width: 100px;
+}
+
+.navbar-search input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-links li {
+  position: relative;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.navbar-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Add some special effects */
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: 0.4s;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}/* General Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgb(255, 98, 0);
+}
+
+/* Navbar Logo */
+.navbar-logo img {
+  width: 100px;
+}
+
+/* Navbar Search */
+.navbar-search input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.navbar-search input:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Navbar Links */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  position: relative;
+}
+
+/* Individual Navbar Link */
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: bold;
+}
+
+/* Navbar Link Hover Effect */
+.navbar-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffeb3b;
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown > a {
+  cursor: pointer;
+  position: relative;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Dropdown Arrow */
+.dropdown > a::after {
+  content: '▼';
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  transition: transform 0.3s;
+}
+
+/* Rotate Arrow on Hover */
+.dropdown:hover > a::after {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu Container */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  padding: 0.5rem 0;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(10px);
+  z-index: 10; /* Ensure dropdown is above other content */
+}
+
+/* Show Dropdown Menu on Hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dropdown Menu Items */
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
+}
+
+/* Dropdown Item Hover Effect */
+.dropdown-menu li a:hover {
+  background-color: rgba(255, 98, 0, 0.1);
+  color: #ff5722;
+  transform: scale(1.05);
+}
+
+/* Add subtle scaling effect on hover */
+.dropdown-menu li a {
+  transition: transform 0.2s ease;
+}
+
+.dropdown-menu li a:hover {
+  transform: scale(1.02);
+}

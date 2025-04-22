@@ -1,0 +1,306 @@
+/* src/Components/CuisinePage.css
+.cuisine-page {
+    padding: 20px;
+}
+
+.products-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cuisine-page-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.cuisine-page-card:hover {
+    transform: scale(1.05);
+}
+
+.cuisine-page-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.cuisine-page-content {
+    padding: 10px;
+}
+
+.cuisine-page-title {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.cuisine-page-description {
+    color: #555;
+}
+
+.cuisine-page-btn {
+    background-color: #f39c12;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cuisine-page-btn:hover {
+    background-color: #e67e22;
+} */
+
+
+/* Cuisine Page Container */
+.cuisine-page {
+    padding: 30px;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Title Styling */
+.cuisine-page h1 {
+    font-size: 2.5rem; /* Slightly larger for more impact */
+    color: #333;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Products Row */
+.products-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Added gap between cards */
+}
+
+/* Cuisine Page Product Card Container */
+.cuisine-page-card {
+    background-color: #ffffff;
+    border-radius: 20px; /* More rounded corners */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+    overflow: hidden;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    padding: 20px;
+    margin: 15px;
+    width: 300px; /* Slightly wider */
+    height: auto; /* Adjust height to fit the content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Hover Effect for Cuisine Page Product Card */
+.cuisine-page-card:hover {
+    transform: translateY(-15px) scale(1.02); /* Slight scale for extra effect */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Cuisine Page Product Image Styling */
+.cuisine-page-image {
+    width: 100%;
+    height: auto;
+    max-height: 220px; /* Ensure image does not exceed a certain height */
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* Hover Effect for Cuisine Page Product Image */
+.cuisine-page-card:hover .cuisine-page-image {
+    transform: scale(1.1) rotate(2deg); /* Add rotation for a dynamic effect */
+    filter: brightness(85%);
+}
+
+/* Cuisine Page Product Content Styling */
+.cuisine-page-content {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 15px;
+    position: relative;
+    top: -20px;
+    box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.4s ease, max-height 0.4s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Hover Effect for Cuisine Page Content */
+.cuisine-page-card:hover .cuisine-page-content {
+    background-color: #fff5f5;
+    max-height: 300px; /* Increased max-height to show more content */
+    overflow: auto; /* Allow scrolling if content exceeds max-height */
+}
+
+/* Cuisine Page Product Title Styling */
+.cuisine-page-title {
+    font-size: 1.75rem; /* Slightly larger */
+    color: #333;
+    margin-bottom: 10px;
+    transition: color 0.4s ease;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Cuisine Page Product Description Styling */
+.cuisine-page-description {
+    font-size: 1.1rem; /* Slightly larger for better readability */
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    transition: color 0.4s ease;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/* Cuisine Page Product Price Styling */
+.cuisine-page-price {
+    font-size: 1.5rem; /* Slightly larger */
+    color: #ff6347;
+    font-weight: bold;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+/* Button Styling */
+.cuisine-page-btn {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.4s ease;
+    position: relative; /* Change from absolute to relative */
+    margin-top: 15px; /* Add margin for spacing */
+    width: 80%; /* Adjust width to make it consistent */
+    text-align: center; /* Center text within the button */
+}
+
+/* Hover Effect for Button */
+.cuisine-page-btn:hover {
+    background-color: #e5533d;
+    transform: scale(1.05); /* Slight scaling for effect */
+}
+
+/* Keyframe Animations */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Additional Decorative Styling */
+.cuisine-page-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #ff6347, #ff914d);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.cuisine-page-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 60%;
+    height: 5px;
+    background: linear-gradient(90deg, #ff914d, #ff6347);
+    transform: translateX(-50%);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Food Styles Section */
+.food-styles {
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Swiper Slide Content */
+.swiper-slide-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Swiper Image Styling */
+.swiper-slide-content img {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* Hover Effect for Swiper Images */
+.swiper-slide-content:hover img {
+    transform: scale(1.15);
+    filter: brightness(80%);
+}
+
+/* Swiper Text Styling */
+.swiper-slide-content p {
+    margin-top: 12px;
+    font-size: 1.2rem;
+    color: #444;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for Swiper Text */
+.swiper-slide-content:hover p {
+    color: #ff6347;
+}
